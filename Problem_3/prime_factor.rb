@@ -21,6 +21,7 @@ def is_prime(num)
   return a
 end
 
+# this method is slow for very large numbers. Very large number kill the process.
 def prime_factors(num)
   primes = []
   (1..num).to_a.each do |n|
@@ -53,7 +54,7 @@ def simple_highest_prime(primes, num)
 end
 
 # prime_factors(600851475143)  # Use this to find all primes half the size of the
-# numnber. I am storying it as an array because it takes too long to run. 
+# number. I am storying it as an array because it takes too long to run. 
 # highest_prime_factor(num)   Use this to give a number and find the highest
 # prime using the full program.  Warning. It is time consuming.
  # simple_highest_prime(Collections::PRIMES, 600851475143)
