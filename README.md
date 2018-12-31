@@ -1,3 +1,3 @@
 ## Euler Project in Ruby
 
-I just started this [project](https://projecteuler.net/). 
+I just solving the [Euler Project](https://projecteuler.net/) challenges in Ruby. 
