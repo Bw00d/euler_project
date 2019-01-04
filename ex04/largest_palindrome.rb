@@ -16,5 +16,16 @@ def is_palindrome(num)
 end
 
 def largest_palindrome
-  
+  divisor_one = 999
+  divisor_two = 999
+  palindromes = []
+  while divisor_one < 99
+    if is_palindrome(divisor_one * divisor_two)
+      palindromes << (divisor_one * divisor_two)
+      divisor_one -= 1
+    else
+      divisor_one -= 1
+    end
+  end
+  print palindromes
 end
