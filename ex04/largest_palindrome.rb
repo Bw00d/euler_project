@@ -15,18 +15,19 @@ def is_palindrome(num)
   result
 end
 
+# I use this method to test that all palindromes where inserted into array.
 def test_method
   divisor_two = 999
   palindromes = []
   while divisor_two > 99
     divisor_one = 999
     900.times do 
-      # if is_palindrome(divisor_one * divisor_two)
+      if is_palindrome(divisor_one * divisor_two)
         palindromes << (divisor_one * divisor_two)
         divisor_one -= 1
-      # else
-        # divisor_one -= 1
-      # end
+      else
+        divisor_one -= 1
+      end
     end
     divisor_two -=1
   end
