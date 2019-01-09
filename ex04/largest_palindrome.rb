@@ -15,17 +15,41 @@ def is_palindrome(num)
   result
 end
 
-def largest_palindrome
-  divisor_one = 999
+def test_method
   divisor_two = 999
   palindromes = []
-  while divisor_one < 99
-    if is_palindrome(divisor_one * divisor_two)
-      palindromes << (divisor_one * divisor_two)
-      divisor_one -= 1
-    else
-      divisor_one -= 1
+  while divisor_two > 99
+    divisor_one = 999
+    900.times do 
+      # if is_palindrome(divisor_one * divisor_two)
+        palindromes << (divisor_one * divisor_two)
+        divisor_one -= 1
+      # else
+        # divisor_one -= 1
+      # end
     end
+    divisor_two -=1
   end
-  print palindromes
+   print palindromes.sort
 end
+
+def largest_palindrome
+  divisor_two = 999
+  palindromes = []
+  while divisor_two > 99
+    divisor_one = 999
+    900.times do 
+      if is_palindrome(divisor_one * divisor_two)
+        palindromes << (divisor_one * divisor_two)
+        divisor_one -= 1
+      else
+        divisor_one -= 1
+      end
+    end
+    divisor_two -=1
+  end
+   puts palindromes.sort.last
+end
+
+largest_palindrome
+# test_method
