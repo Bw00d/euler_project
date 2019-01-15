@@ -18,6 +18,7 @@ def is_prime(num)
 end
 
 # It needs to keep track of nth prime, the value, and to iterate through numbers.
+# It needs to take a number as the nth prime to discover.
 def nth_prime(num)
   nth = 0
   i = 2
