@@ -9,3 +9,17 @@
 
 # Find the difference between the sum of the squares of the first one hundred 
 # natural numbers and the square of the sum.
+
+def sum_of_squares(num)
+  sum = 0 
+  (1..num).map { |n| sum += n ** 2 }
+  sum
+end
+
+def square_of_sums(num)
+  (1..num).inject(:+) ** 2
+end
+
+def difference(num)
+  square_of_sums(num) - sum_of_squares(num)
+end
