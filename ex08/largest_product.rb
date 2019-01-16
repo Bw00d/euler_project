@@ -52,4 +52,14 @@ def product_range(range)
   Collections::LARGE_NUM[0..range-1].inject(:*)
 end
 
+def check_answer(range)
+  array = Collections::LARGE_NUM
+  products = [0]
+  while array.length >= range
+    products << array[0..range-1].inject(:*)
+    array = array.drop(1)
+  end
+  products.sort.last
+end
+
 largest_product(13)

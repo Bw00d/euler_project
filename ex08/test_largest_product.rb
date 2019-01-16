@@ -15,4 +15,8 @@ class LargestProductTest < Minitest::Test
   def test_display_result
     assert_equal "1 x 2 x 3 x 4 x 5 = 120", display_result
   end
+
+  def test_check_answer
+    assert_equal 5377010688, check_answer(13)  
+  end
 end
