@@ -1,3 +1,4 @@
+require_relative '../helpers/collections'
 # The four adjacent digits in the 1000-digit number that have the greatest product 
 # are 9 × 9 × 8 × 9 = 5832.
 
@@ -24,3 +25,31 @@
 
 # Find the thirteen adjacent digits in the 1000-digit number that have the greatest 
 # product. What is the value of this product?
+
+def largest_product(range)
+  array = Collections::LARGE_NUM
+  product = 0
+  digits = []
+  while array.length >= range
+    if array[0..range-1].inject(:*) > product
+      product = array[0..range-1].inject(:*)
+      digits = array[0..range-1]
+      array = array.drop(1)
+    else
+      array = array.drop(1)
+    end
+  end
+  puts digits.join(' x ') + " = " + product.to_s
+end
+
+def display_result
+  digits = [1,2,3,4,5]
+  product = 120
+  digits.join(' x ') + " = " + product.to_s
+end
+
+def product_range(range)
+  Collections::LARGE_NUM[0..range-1].inject(:*)
+end
+
+largest_product(13)
