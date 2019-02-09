@@ -5,3 +5,10 @@
 
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 # Find the product abc.
+
+def triplet
+  a = 1
+  b = 2
+  c = 3
+  
+end
