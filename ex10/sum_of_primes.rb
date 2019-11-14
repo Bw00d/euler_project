@@ -9,7 +9,7 @@ def is_prime(num)
     a = false
   else
     while i > 1
-      if num % i == 0   
+      if num % i == 0
         a = false
         i -= 1
       else
@@ -33,4 +33,6 @@ def sum_of_primes(num)
   sum
 end
 
-puts sum_of_primes(10000)
+# it is time consuming to run the calculation. I puts the numbers as they sum
+# so that the user can see that it is working.
+puts sum_of_primes(200000)
