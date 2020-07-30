@@ -1,3 +1,3 @@
 ## Euler Project in Ruby
 
-I recently started solving the [Euler Project](https://projecteuler.net/) challenges in Ruby. Great way to become fluent in the syntax of a language.
+Working on solving [Euler Project](https://projecteuler.net/) challenges in Ruby for fun. Great way to become fluent in the syntax of a language.
